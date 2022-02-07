@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: kubernetes-demo-pod
+ labels:
+   app: solution_standalone
+spec:
+ containers:
+   - name: standalone-demo-container
+     image: erichsieh84/solution_standalone
+     ports:
+       - containerPort: 3000

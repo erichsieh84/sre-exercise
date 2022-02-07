@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-blue
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: docker-blue
+    spec:
+      containers:
+        - name: docker-blue
+          image: erichsieh84/docker_blue
+          ports:
+            - containerPort: 3000
+  selector:
+    matchLabels:
+      app: docker-blue
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-red
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: docker-red
+    spec:
+      containers:
+        - name: docker-red
+          image: erichsieh84/docker_blue
+          ports:
+            - containerPort: 3000
+  selector:
+    matchLabels:
+      app: docker-red

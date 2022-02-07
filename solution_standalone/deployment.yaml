@@ -1,0 +1,20 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: solution_standalone
+    spec:
+      containers:
+        - name: standalone-demo-container
+          image: erichsieh84/solution_standalone
+          ports:
+            - containerPort: 3000
+  selector:
+    matchLabels:
+      app: solution_standalone
