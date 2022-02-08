@@ -144,7 +144,6 @@ Enable Ingress
 
 **minikube addons enable ingress**
 
-```javascript
+
 ![Alt text](/solution_standalone/screenshots/dashboard.png?raw=true "Optional Title")
 
-```
