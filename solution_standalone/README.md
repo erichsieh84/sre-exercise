@@ -143,3 +143,8 @@ Create a new service service_ingress.yaml
 Enable Ingress
 
 **minikube addons enable ingress**
+
+```javascript
+![Alt text](../screenshots/dashboard.png?raw=true "Optional Title")
+
+```
