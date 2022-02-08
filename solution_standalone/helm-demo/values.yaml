@@ -1,0 +1,15 @@
+replicaCount: 2
+ ​
+ image:
+   repository: erichsieh84/solution_standalone
+ ​
+ service:
+   type: NodePort
+   port: 80
+ ​
+ ingress:
+   enabled: true
+ ​
+   hosts:
+     - host: blue.demo.com
+       paths: [/]
